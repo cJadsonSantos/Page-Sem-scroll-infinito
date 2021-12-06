@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+    <link rel="shortcut icon" type="image/png" href="./img/icon.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<img src="img/poligono.png" class="poligono" alt="">
+<!--HEADER-->
+<header class="menu logo item">
+    <div class="menu-logo"><img src="img/oscars-logo.png" alt=""></div>
+</header>
+
+    <!--Filtro-->
+    <div class="filtro item-1">
+        <div>
+            <select name="" id="" class="selected">
+                <optgroup">
+                    <option value="" class="personalizar-option">Filtrar por</option>
+                    <option value="" class="personalizar-option">Ordem alfabética</option>
+                    <option value="" class="personalizar-option">Score do IMDB</option>
+                    <option value="" class="personalizar-option">Duração</option>
+                    <option value="" class="personalizar-option">Número de indicações</option>
+                </optgroup>
+            </select>
+        </div>
+    </div>
+    <section class="container">
+        <div class="container-item item-1">
+            <img src="img/mulan.png" alt="">
+            <img src="img/bacurau.png" alt="">
+            <img src="img/love-and-Monsters.png" alt="">
+            <img src="img/emma.png" alt="">
+            <img src="img/tenet.png" alt="">
+        </div>
+        <div class="container-item  item-2">
+            <img src="img/over-moon.png" alt="">
+            <img src="img/Ceu-da-meia-noite.png" alt="">
+            <img src="img/another-round.png" alt="">
+            <img src="img/chicago7.png" alt="">
+            <img src="img/fences.png" alt="">
+        </div>
+    </section>
+
+    <div class="loader">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
+        integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"
+        integrity="sha512-CPA5LMoJI/a5HkSIAKcBtFXe4gqGjPUL2ExF/3PmhrrHI17wod9xOqqF+0WZQRKIIq0KwF8oG5BaiWobtrke3A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            var timeline = gsap.timeline();
+
+            timeline
+                .from(".item", {
+                    duration: 1,
+                    y: 50,
+                    opacity: 0,
+                    delay: 1
+                }, "-=0.5")
+                .from(".item-1", {
+                    duration: 1,
+                    y: 50,
+                    opacity: 0,
+                }, "-=0.5")
+                .from(".item-2", {
+                    duration: 1,
+                    y: 50,
+                    opacity: 0,
+                }, "-=0.5")
+        })
+    </script>
+</body>
+
+</html>
